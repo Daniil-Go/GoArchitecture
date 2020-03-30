@@ -9,6 +9,7 @@ import (
 
 type Subscriber func(msg string) error
 
+// Почему поля передаем по указателю?
 type Server struct {
 	router   *chi.Mux
 	upgrader *websocket.Upgrader
@@ -25,6 +26,8 @@ func New() *Server {
 		WriteBufferSize: 1024,
 	}
 
+	// Почему обращаемся по адресу?
+	// Создаем структуру и берем сразу адрес
 	serv := &Server{
 		router:   router,
 		upgrader: upgrader,

@@ -1,9 +1,9 @@
 package main
 
 import (
+	"GoArchitecture/RealTimeChat/server"
 	"fmt"
 	"log"
-	"realtimechat/server"
 )
 
 func main() {
